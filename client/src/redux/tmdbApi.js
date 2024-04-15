@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const tmdbApi = createApi({
   reducerPath: "tmdbApi",
-  baseQuery: fetchBaseQuery({ baseUrl: `http://localhost:8800/api` }),
+  baseQuery: fetchBaseQuery({ baseUrl: `/api` }),
   endpoints: (builder) => ({
     getTrending: builder.query({
       query: (type) =>
