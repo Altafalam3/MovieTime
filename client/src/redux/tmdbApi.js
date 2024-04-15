@@ -22,13 +22,13 @@ export const tmdbApi = createApi({
           const result = await fetchWithBQ(
             `/trending/movie/${singleData.id}`
           );
-          return result.data ? { data: {...result.data, mediaType: "movie"} } : { error: result.error };
+          return result.data ? { data: { ...result.data, mediaType: "movie" } } : { error: result.error };
         }
         if (singleData.media_type === "tv") {
           const result = await fetchWithBQ(
             `/trending/show/${singleData.id}`
           );
-          return result.data ? { data: {...result.data, mediaType: "show"} } : { error: result.error };
+          return result.data ? { data: { ...result.data, mediaType: "show" } } : { error: result.error };
         }
       },
     }),
@@ -74,8 +74,8 @@ export const tmdbApi = createApi({
     }),
 
     getMovieGenrePage: builder.query({
-      query: (args) => { 
-        const {page, genre} = args;
+      query: (args) => {
+        const { page, genre } = args;
         return {
           url: `/movie/genre/${genre}/${page}`,
           params: { page, genre }
@@ -114,8 +114,8 @@ export const tmdbApi = createApi({
     }),
 
     getShowEpisodes: builder.query({
-      query: (args) => { 
-        const {show_id, seasonNumber} = args;
+      query: (args) => {
+        const { show_id, seasonNumber } = args;
         return {
           url: `/episodes/show/${show_id}/${seasonNumber}`,
           params: { show_id, seasonNumber }
@@ -124,8 +124,8 @@ export const tmdbApi = createApi({
     }),
 
     getShowGenrePage: builder.query({
-      query: (args) => { 
-        const {page, genre} = args;
+      query: (args) => {
+        const { page, genre } = args;
         return {
           url: `/show/genre/${genre}/${page}`,
           params: { page, genre }
@@ -138,8 +138,8 @@ export const tmdbApi = createApi({
     }),
 
     getSearchResults: builder.query({
-      query: (args) => { 
-        const {query, page} = args;
+      query: (args) => {
+        const { query, page } = args;
         return {
           url: `/search/${query}/${page}`,
           params: { query, page }
@@ -148,6 +148,12 @@ export const tmdbApi = createApi({
     }),
 
   }),
+  // Add the cache headers
+  refetchOnMountOrArgChange: false,
+  refetchOnReconnect: false,
+  refetchOnFocus: false,
+  keepUnusedDataFor: 60 * 60 * 1000, // Keep data in the cache for 1 hour
+
 });
 
 
