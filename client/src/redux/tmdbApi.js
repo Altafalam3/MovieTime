@@ -6,7 +6,7 @@ export const tmdbApi = createApi({
   endpoints: (builder) => ({
     getTrending: builder.query({
       query: (type) =>
-        `/trending/${type}`,
+        `https://movietime-p212.onrender.com/trending/${type}`,
     }),
 
     getSingleTrending: builder.query({
