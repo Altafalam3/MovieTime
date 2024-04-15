@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const tmdbApi = createApi({
   reducerPath: "tmdbApi",
-  baseQuery: fetchBaseQuery({ baseUrl: `https://movietime-p212.onrender.com/api` }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://movietime-p212.onrender.com/api" }),
   endpoints: (builder) => ({
     getTrending: builder.query({
       query: (type) =>
