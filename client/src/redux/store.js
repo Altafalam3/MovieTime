@@ -1,8 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { offline } from 'redux-offline';
-import offlineConfig from 'redux-offline/lib/defaults';
 import layoutReducer from "./layoutSlice";
 import genreReducer from "./genreSlice";
 import userReducer from "./userSlice";

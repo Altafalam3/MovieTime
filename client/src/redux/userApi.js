@@ -88,12 +88,6 @@ export const userApi = createApi({
       invalidatesTags: ["collection"],
     }),
   }),
-  // Add the cache headers
-  // refetchOnMountOrArgChange: false,
-  // refetchOnReconnect: false,
-  // refetchOnFocus: false,
-  // keepUnusedDataFor: 60 * 60 * 1000, // Keep data in the cache for 1 hour
-
 });
 
 export const {
