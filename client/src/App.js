@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import Navbar from "./components/general/Navbar";
 import Search from "./components/general/Search";
-// import ScrollToTop from "./components/general/ScrollToTop";
 import SearchResults from "./pages/SearchResults";
 import Account from "./pages/Account";
 // Loaders
@@ -44,8 +43,6 @@ function App() {
         <Search />
         {/* Navbar */}
         <Navbar />
-        {/* Scroll To Top */}
-        {/* <ScrollToTop /> */}
         {/* Routes */}
         <Routes>
           {/* Home */}
