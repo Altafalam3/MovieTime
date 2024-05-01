@@ -2,7 +2,9 @@ require("dotenv").config();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const express = require("express");
+
 const app = express();
+
 const tmdbRoutes = require("./routes/tmdb");
 const userRoutes = require("./routes/user");
 const collectionRoutes = require("./routes/collection");

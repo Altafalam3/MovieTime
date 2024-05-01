@@ -10,16 +10,16 @@ const Footer = () => {
         <div className="w-full flex justify-evenly items-center sm:flex-col sm:items-start sm:justify-center gap-2">
 
           <div className="text-sm text-center sm:text-left">
-            <p>Copyright © 2022 - All rights reserved.</p>
+            <p>Copyright © 2024 - All rights reserved.</p>
             <p>Made with ❤ by TEAM COC
             </p>
-            <p>Data provided by -{" "} 
+            <p>Data provided by -{" "}
                 <a aria-label="tmdb" target="_blank" rel="noreferrer" className="hover:text-white underline"
                     href="https://www.themoviedb.org/">TMDB
                 </a>
             </p>
           </div>
-          
+
         </div>
         <div className="flex items-center justify-center gap-4 pb-10 sm:p-0">
             <a 
